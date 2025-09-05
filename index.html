@@ -52,15 +52,23 @@
         .logo {
             display: flex;
             align-items: center;
+            text-decoration: none;
         }
 
-        .logo img {
+        .logo-img {
             height: 50px;
+            width: 50px;
             margin-right: 10px;
             background: white;
             padding: 5px;
             border-radius: 50%;
             border: 2px solid var(--accent);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 20px;
+            color: var(--primary);
         }
 
         .logo h1 {
@@ -335,63 +343,6 @@
             transform: rotate(90deg);
         }
 
-        /* Contact Section */
-        #contact {
-            background: linear-gradient(135deg, var(--secondary), var(--primary));
-            padding: 60px 5%;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            color: white;
-        }
-
-        .contact-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-
-        .contact-info {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .contact-form {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 500;
-            color: white;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 5px;
-            font-size: 1rem;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-        }
-
-        .form-group input::placeholder,
-        .form-group textarea::placeholder {
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .form-group textarea {
-            height: 150px;
-            resize: vertical;
-        }
-
         /* Footer */
         footer {
             background-color: var(--dark);
@@ -503,10 +454,15 @@
             .section-title {
                 font-size: 1.8rem;
             }
-            
-            .contact-container {
-                flex-direction: column;
-            }
+        }
+
+        /* Page Container */
+        .page {
+            display: none;
+        }
+        
+        .page.active {
+            display: block;
         }
     </style>
 </head>
@@ -514,15 +470,15 @@
     <!-- Header with Navigation -->
     <header>
         <div class="header-container">
-            <div class="logo">
-                <img src="1.png" alt="VivaFashion Logo">
-                <h1>VivaFashion</h1>
-            </div>
+            <a href="#" class="logo" onclick="showPage('home')">
+                <div class="logo-img">MP</div>
+                <h1>Money Prob</h1>
+            </a>
             <nav>
                 <ul>
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#" class="active" onclick="showPage('home')">Home</a></li>
+                    <li><a href="#products" onclick="showPage('home')">Products</a></li>
+                    <li><a href="#" onclick="showPage('contact')">Contact</a></li>
                 </ul>
             </nav>
             <div class="header-icons">
@@ -536,116 +492,120 @@
         </div>
     </header>
 
-    <!-- Main Content -->
-    <div class="main-content">
-        <!-- Hero Section -->
-        <section class="hero">
-            <h2>New Summer Collection 2023</h2>
-            <p>Discover the latest trends and express your unique style with our exclusive summer collection</p>
-            <a href="#products" class="btn">Shop Now</a>
-        </section>
+    <!-- Home Page -->
+    <div id="home-page" class="page active">
+        <div class="main-content">
+            <!-- Hero Section -->
+            <section class="hero">
+                <h2>New Summer Collection 2023</h2>
+                <p>Discover the latest trends and express your unique style with our exclusive summer collection</p>
+                <a href="#products" class="btn">Shop Now</a>
+            </section>
 
-        <!-- Categories Section -->
-        <h2 class="section-title">Featured Categories</h2>
-        <div class="categories">
-            <div class="category-card">
-                <img src="https://images.unsplash.com/photo-1525299374597-911581e1bdef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Men's Fashion">
-                <div class="category-content">
-                    <h3>Men's Fashion</h3>
-                    <a href="#products" class="btn">Explore</a>
+            <!-- Categories Section -->
+            <h2 class="section-title">Featured Categories</h2>
+            <div class="categories">
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1525299374597-911581e1bdef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Men's Fashion">
+                    <div class="category-content">
+                        <h3>Men's Fashion</h3>
+                        <a href="#products" class="btn">Explore</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Women's Fashion">
+                    <div class="category-content">
+                        <h3>Women's Fashion</h3>
+                        <a href="#products" class="btn">Explore</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1519241047957-be31d7379a5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Accessories">
+                    <div class="category-content">
+                        <h3>Accessories</h3>
+                        <a href="#products" class="btn">Explore</a>
+                    </div>
                 </div>
             </div>
-            <div class="category-card">
-                <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Women's Fashion">
-                <div class="category-content">
-                    <h3>Women's Fashion</h3>
-                    <a href="#products" class="btn">Explore</a>
+
+            <!-- Products Section -->
+            <h2 class="section-title" id="products">Best Sellers</h2>
+            <div class="products">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Denim Jacket">
+                    </div>
+                    <div class="product-info">
+                        <h3>Classic Denim Jacket</h3>
+                        <div class="product-price">
+                            <div>
+                                <span class="price">$59.99</span>
+                                <span class="old-price">$79.99</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="category-card">
-                <img src="https://images.unsplash.com/photo-1519241047957-be31d7379a5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Accessories">
-                <div class="category-content">
-                    <h3>Accessories</h3>
-                    <a href="#products" class="btn">Explore</a>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1036&q=80" alt="Summer Dress">
+                    </div>
+                    <div class="product-info">
+                        <h3>Floral Summer Dress</h3>
+                        <div class="product-price">
+                            <div>
+                                <span class="price">$45.99</span>
+                                <span class="old-price">$59.99</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1611312449408-fcece27cdbb7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=699&q=80" alt="Sneakers">
+                    </div>
+                    <div class="product-info">
+                        <h3>Urban Sneakers</h3>
+                        <div class="product-price">
+                            <div>
+                                <span class="price">$89.99</span>
+                                <span class="old-price">$109.99</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1582142306909-195724d3a58c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Handbag">
+                    </div>
+                    <div class="product-info">
+                        <h3>Designer Handbag</h3>
+                        <div class="product-price">
+                            <div>
+                                <span class="price">$129.99</span>
+                                <span class="old-price">$149.99</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Products Section -->
-        <h2 class="section-title" id="products">Best Sellers</h2>
-        <div class="products">
-            <div class="product-card">
-                <div class="product-img">
-                    <img src="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwa90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Denim Jacket">
-                </div>
-                <div class="product-info">
-                    <h3>Classic Denim Jacket</h3>
-                    <div class="product-price">
-                        <div>
-                            <span class="price">$59.99</span>
-                            <span class="old-price">$79.99</span>
-                        </div>
-                        <button class="add-to-cart">
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-img">
-                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1036&q=80" alt="Summer Dress">
-                </div>
-                <div class="product-info">
-                    <h3>Floral Summer Dress</h3>
-                    <div class="product-price">
-                        <div>
-                            <span class="price">$45.99</span>
-                            <span class="old-price">$59.99</span>
-                        </div>
-                        <button class="add-to-cart">
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-img">
-                    <img src="https://images.unsplash.com/photo-1611312449408-fcece27cdbb7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=0699&q=80" alt="Sneakers">
-                </div>
-                <div class="product-info">
-                    <h3>Urban Sneakers</h3>
-                    <div class="product-price">
-                        <div>
-                            <span class="price">$89.99</span>
-                            <span class="old-price">$109.99</span>
-                        </div>
-                        <button class="add-to-cart">
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-img">
-                    <img src="https://images.unsplash.com/photo-1582142306909-195724d3a58c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Handbag">
-                </div>
-                <div class="product-info">
-                    <h3>Designer Handbag</h3>
-                    <div class="product-price">
-                        <div>
-                            <span class="price">$129.99</span>
-                            <span class="old-price">$149.99</span>
-                        </div>
-                        <button class="add-to-cart">
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Contact Section -->
-        <section id="contact">
+    <!-- Contact Page -->
+    <div id="contact-page" class="page">
+        <div class="main-content">
             <h2 class="section-title">Contact Us</h2>
             
             <div class="contact-container">
@@ -656,7 +616,7 @@
                     <div class="contact-details">
                         <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> 123 Fashion Street, New York, NY 10001</p>
                         <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +1 (555) 123-4567</p>
-                        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> info@vivafashion.com</p>
+                        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> info@moneyprob.com</p>
                         <p><i class="fas fa-clock"></i> <strong>Hours:</strong> Monday-Friday: 9am-8pm, Saturday-Sunday: 10am-6pm</p>
                     </div>
                 </div>
@@ -688,14 +648,14 @@
                     </form>
                 </div>
             </div>
-        </section>
+        </div>
     </div>
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-column">
-                <h3>VivaFashion</h3>
+                <h3>Money Prob</h3>
                 <p>We offer the latest fashion trends for everyone. Quality products at affordable prices.</p>
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -707,11 +667,11 @@
             <div class="footer-column">
                 <h3>Shop</h3>
                 <ul>
-                    <li><a href="#products">Men's Clothing</a></li>
-                    <li><a href="#products">Women's Clothing</a></li>
-                    <li><a href="#products">Accessories</a></li>
-                    <li><a href="#products">New Arrivals</a></li>
-                    <li><a href="#products">Sale</a></li>
+                    <li><a href="#products" onclick="showPage('home')">Men's Clothing</a></li>
+                    <li><a href="#products" onclick="showPage('home')">Women's Clothing</a></li>
+                    <li><a href="#products" onclick="showPage('home')">Accessories</a></li>
+                    <li><a href="#products" onclick="showPage('home')">New Arrivals</a></li>
+                    <li><a href="#products" onclick="showPage('home')">Sale</a></li>
                 </ul>
             </div>
             <div class="footer-column">
@@ -729,16 +689,39 @@
                 <ul>
                     <li><i class="fas fa-map-marker-alt"></i> 123 Fashion Street, City</li>
                     <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
-                    <li><i class="fas fa-envelope"></i> info@vivafashion.com</li>
+                    <li><i class="fas fa-envelope"></i> info@moneyprob.com</li>
+                    <li><a href="#" onclick="showPage('contact')">Contact Page</a></li>
                 </ul>
             </div>
         </div>
         <div class="copyright">
-            <p>&copy; 2023 VivaFashion. All rights reserved.</p>
+            <p>&copy; 2023 Money Prob. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
+        // Multi-page functionality
+        function showPage(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show the selected page
+            document.getElementById(pageId + '-page').classList.add('active');
+            
+            // Update navigation active state
+            document.querySelectorAll('nav a').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Set the clicked link as active
+            event.target.classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
         // Add to cart functionality
         document.addEventListener('DOMContentLoaded', function() {
             const addToCartButtons = document.querySelectorAll('.add-to-cart');
@@ -761,13 +744,13 @@
             // Smooth scrolling for navigation links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
+                    if (this.getAttribute('href') === '#') return;
                     
                     const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
                     const targetElement = document.querySelector(targetId);
+                    
                     if (targetElement) {
+                        e.preventDefault();
                         window.scrollTo({
                             top: targetElement.offsetTop - 80,
                             behavior: 'smooth'
