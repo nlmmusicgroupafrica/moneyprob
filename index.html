@@ -137,7 +137,7 @@
         /* Hero Section */
         .hero {
             height: 80vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('2.png');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -471,13 +471,16 @@
     <header>
         <div class="header-container">
             <a href="#" class="logo" onclick="showPage('home')">
-                <div class="1.png">MP</div>
+                <div class="logo-img">MP</div>
                 <h1>Money Prob</h1>
             </a>
             <nav>
                 <ul>
                     <li><a href="#" class="active" onclick="showPage('home')">Home</a></li>
-                    <li><a href="#products" onclick="showPage('home')">Products</a></li>
+                    <li><a href="#t-shirts" onclick="showPage('home')">T-Shirts</a></li>
+                    <li><a href="#hoodies" onclick="showPage('home')">Hoodies</a></li>
+                    <li><a href="#caps-hats" onclick="showPage('home')">Caps & Hats</a></li>
+                    <li><a href="#trousers" onclick="showPage('home')">Trousers</a></li>
                     <li><a href="#" onclick="showPage('contact')">Contact</a></li>
                 </ul>
             </nav>
@@ -497,46 +500,126 @@
         <div class="main-content">
             <!-- Hero Section -->
             <section class="hero">
-                <h2>Money Prob Clothing BranD</h2>
+                <h2>Money Prob Clothing Brand</h2>
                 <p>Elevate your wardrobe and express a higher currency of style with our latest Money Prob collection</p>
-                <a href="#products" class="btn">Shop Now</a>
+                <a href="#t-shirts" class="btn">Shop Now</a>
             </section>
 
             <!-- Categories Section -->
             <h2 class="section-title">Featured Categories</h2>
             <div class="categories">
                 <div class="category-card">
-                    <img src="https://images.unsplash.com/photo-1525299374597-911581e1bdef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Men's Fashion">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80" alt="T-Shirts">
                     <div class="category-content">
-                        <h3>Men's Fashion</h3>
-                        <a href="#products" class="btn">Explore</a>
+                        <h3>T-Shirts</h3>
+                        <a href="#t-shirts" class="btn">Explore</a>
                     </div>
                 </div>
                 <div class="category-card">
-                    <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Women's Fashion">
+                    <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Hoodies">
                     <div class="category-content">
-                        <h3>Women's Fashion</h3>
-                        <a href="#products" class="btn">Explore</a>
+                        <h3>Hoodies</h3>
+                        <a href="#hoodies" class="btn">Explore</a>
                     </div>
                 </div>
                 <div class="category-card">
-                    <img src="https://images.unsplash.com/photo-1519241047957-be31d7379a5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Accessories">
+                    <img src="https://images.unsplash.com/photo-1534215754734-18e55d13e145?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Caps & Hats">
                     <div class="category-content">
-                        <h3>Accessories</h3>
-                        <a href="#products" class="btn">Explore</a>
+                        <h3>Caps & Hats</h3>
+                        <a href="#caps-hats" class="btn">Explore</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1026&q=80" alt="Trousers">
+                    <div class="category-content">
+                        <h3>Trousers</h3>
+                        <a href="#trousers" class="btn">Explore</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Products Section -->
-            <h2 class="section-title" id="products">Best Sellers</h2>
+            <!-- T-Shirts Section -->
+            <h2 class="section-title" id="t-shirts">T-Shirts</h2>
             <div class="products">
                 <div class="product-card">
                     <div class="product-img">
-                        <img src="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Denim Jacket">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80" alt="Classic T-Shirt">
                     </div>
                     <div class="product-info">
-                        <h3>Classic Denim Jacket</h3>
+                        <h3>Classic Money Prob T-Shirt</h3>
+                        <div class="product-price">
+                            <div>
+                                <span class="price">$29.99</span>
+                                <span class="old-price">$39.99</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1523381294911-8d3cead13475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Graphic T-Shirt">
+                    </div>
+                    <div class="product-info">
+                        <h3>Graphic Print T-Shirt</h3>
+                        <div class="product-price">
+                            <div>
+                                <span class="price">$34.99</span>
+                                <span class="old-price">$44.99</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" alt="Premium T-Shirt">
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Cotton T-Shirt</h3>
+                        <div class="product-price">
+                            <div>
+                                <span class="price">$39.99</span>
+                                <span class="old-price">$49.99</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Oversized T-Shirt">
+                    </div>
+                    <div class="product-info">
+                        <h3>Oversized Street T-Shirt</h3>
+                        <div class="product-price">
+                            <div>
+                                <span class="price">$36.99</span>
+                                <span class="old-price">$46.99</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hoodies Section -->
+            <h2 class="section-title" id="hoodies">Hoodies</h2>
+            <div class="products">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Classic Hoodie">
+                    </div>
+                    <div class="product-info">
+                        <h3>Classic Money Prob Hoodie</h3>
                         <div class="product-price">
                             <div>
                                 <span class="price">$59.99</span>
@@ -550,14 +633,14 @@
                 </div>
                 <div class="product-card">
                     <div class="product-img">
-                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1036&q=80" alt="Summer Dress">
+                        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=697&q=80" alt="Zip Hoodie">
                     </div>
                     <div class="product-info">
-                        <h3>Floral Summer Dress</h3>
+                        <h3>Zip-Up Hoodie</h3>
                         <div class="product-price">
                             <div>
-                                <span class="price">$45.99</span>
-                                <span class="old-price">$59.99</span>
+                                <span class="price">$64.99</span>
+                                <span class="old-price">$84.99</span>
                             </div>
                             <button class="add-to-cart">
                                 <i class="fas fa-shopping-cart"></i>
@@ -567,14 +650,14 @@
                 </div>
                 <div class="product-card">
                     <div class="product-img">
-                        <img src="https://images.unsplash.com/photo-1611312449408-fcece27cdbb7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=699&q=80" alt="Sneakers">
+                        <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" alt="Premium Hoodie">
                     </div>
                     <div class="product-info">
-                        <h3>Urban Sneakers</h3>
+                        <h3>Premium Street Hoodie</h3>
                         <div class="product-price">
                             <div>
-                                <span class="price">$89.99</span>
-                                <span class="old-price">$109.99</span>
+                                <span class="price">$69.99</span>
+                                <span class="old-price">$89.99</span>
                             </div>
                             <button class="add-to-cart">
                                 <i class="fas fa-shopping-cart"></i>
@@ -584,14 +667,160 @@
                 </div>
                 <div class="product-card">
                     <div class="product-img">
-                        <img src="https://images.unsplash.com/photo-1582142306909-195724d3a58c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Handbag">
+                        <img src="https://images.unsplash.com/photo-1544966503-7cc5ac882d5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Graphic Hoodie">
                     </div>
                     <div class="product-info">
-                        <h3>Designer Handbag</h3>
+                        <h3>Graphic Print Hoodie</h3>
                         <div class="product-price">
                             <div>
-                                <span class="price">$129.99</span>
-                                <span class="old-price">$149.99</span>
+                                <span class="price">$74.99</span>
+                                <span class="old-price">$94.99</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Caps & Hats Section -->
+            <h2 class="section-title" id="caps-hats">Caps & Hats</h2>
+            <div class="products">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1534215754734-18e55d13e145?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Baseball Cap">
+                    </div>
+                    <div class="product-info">
+                        <h3>Classic Baseball Cap</h3>
+                        <div class="product-price">
+                            <div>
+                                <span class="price">$24.99</span>
+                                <span class="old-price">$34.99</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=736&q=80" alt="Beanie">
+                    </div>
+                    <div class="product-info">
+                        <h3>Street Beanie</h3>
+                        <div class="product-price">
+                            <div>
+                                <span class="price">$19.99</span>
+                                <span class="old-price">$29.99</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1575428652377-a2d80e2277fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Snapback Cap">
+                    </div>
+                    <div class="product-info">
+                        <h3>Snapback Cap</h3>
+                        <div class="product-price">
+                            <div>
+                                <span class="price">$27.99</span>
+                                <span class="old-price">$37.99</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1592400374405-2b0cc4fb7c3c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Bucket Hat">
+                    </div>
+                    <div class="product-info">
+                        <h3>Bucket Hat</h3>
+                        <div class="product-price">
+                            <div>
+                                <span class="price">$22.99</span>
+                                <span class="old-price">$32.99</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trousers Section -->
+            <h2 class="section-title" id="trousers">Trousers</h2>
+            <div class="products">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1026&q=80" alt="Cargo Pants">
+                    </div>
+                    <div class="product-info">
+                        <h3>Street Cargo Pants</h3>
+                        <div class="product-price">
+                            <div>
+                                <span class="price">$59.99</span>
+                                <span class="old-price">$79.99</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1036&q=80" alt="Joggers">
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Joggers</h3>
+                        <div class="product-price">
+                            <div>
+                                <span class="price">$49.99</span>
+                                <span class="old-price">$69.99</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1473966968600-fa801b869a1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Denim Pants">
+                    </div>
+                    <div class="product-info">
+                        <h3>Designer Denim Pants</h3>
+                        <div class="product-price">
+                            <div>
+                                <span class="price">$69.99</span>
+                                <span class="old-price">$89.99</span>
+                            </div>
+                            <button class="add-to-cart">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Track Pants">
+                    </div>
+                    <div class="product-info">
+                        <h3>Track Pants</h3>
+                        <div class="product-price">
+                            <div>
+                                <span class="price">$54.99</span>
+                                <span class="old-price">$74.99</span>
                             </div>
                             <button class="add-to-cart">
                                 <i class="fas fa-shopping-cart"></i>
@@ -667,11 +896,11 @@
             <div class="footer-column">
                 <h3>Shop</h3>
                 <ul>
-                    <li><a href="#products" onclick="showPage('home')">Men's Clothing</a></li>
-                    <li><a href="#products" onclick="showPage('home')">Women's Clothing</a></li>
-                    <li><a href="#products" onclick="showPage('home')">Accessories</a></li>
-                    <li><a href="#products" onclick="showPage('home')">New Arrivals</a></li>
-                    <li><a href="#products" onclick="showPage('home')">Sale</a></li>
+                    <li><a href="#t-shirts" onclick="showPage('home')">T-Shirts</a></li>
+                    <li><a href="#hoodies" onclick="showPage('home')">Hoodies</a></li>
+                    <li><a href="#caps-hats" onclick="showPage('home')">Caps & Hats</a></li>
+                    <li><a href="#trousers" onclick="showPage('home')">Trousers</a></li>
+                    <li><a href="#t-shirts" onclick="showPage('home')">New Arrivals</a></li>
                 </ul>
             </div>
             <div class="footer-column">
